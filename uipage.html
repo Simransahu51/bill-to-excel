@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExceloFy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="left">
+            <a href="#" class="active">ExceloFy</a>
+            <a href="#">About</a>
+            <a href="#">Documentation</a>
+            <a href="#" id="selectFolderLink">Select Folder</a>
+            <a href="#" id="downloadLink" >Download Folder</a>
+        </div>
+        <div class="right">
+            <a href="#">Login</a>
+            <a href="#">Sign Up</a>
+        </div>
+    </div>
+
+    <div class="container" id="selectFolderSection" style="display: none;">
+        <h1>Convert Folder to Excel</h1>
+        <form id="convertForm" enctype="multipart/form-data">
+            <input type="file" id="fileInput" style="display: none;" multiple>
+            <button type="button" onclick="browseFiles()">Browse</button>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="container" id="resultSection" style="display: none;">
+        <h2>Conversion Result</h2>
+        <p id="excelFile"></p>
+        <button id="downloadButton">Download Excel</button>
+    </div>
+
+    <script defer src="script.js"></script>
+</body>
+</html>
